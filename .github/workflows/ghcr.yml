@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.GHCR_PAT }}
 
       - name: Build the image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest -f apps/financial-dashboard/Dockerfile
+        run: docker build -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest -f apps/financial-dashboard
 
       - name: Push the image
         run: docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest
